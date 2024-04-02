@@ -1,0 +1,19 @@
+{
+  "name": "desafio_evaluado_26_prueba_modulo_6_club_deportivo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {    
+    "server": "nodemon server.js || echo 'Error: No inicio servidor con nodemon, asegúrate que archivo.js existe.'"
+  },
+  "keywords": [],
+  "author": "jonathan viera",
+  "license": "MIT",
+  "dependencies": {       
+    "chalk": "^4.1.2",   
+    "express": "^4.19.2"   
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
