@@ -1,5 +1,7 @@
+/*
 🚀[desafio_evaluado_26_prueba_modulo_6_club_deportivo2](https://desafio-evaluado-26-prueba-modulo-6-club.onrender.com)
 .
+*/
 //--------------------------------------------------
 //--roles de reuniones entre informaticos
 //--------------------------------------------------
