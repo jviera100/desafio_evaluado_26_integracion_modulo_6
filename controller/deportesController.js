@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const dataPath = path.join(__dirname, '../data', 'deportes.json');
 
+// Función para leer los datos de deportes desde el archivo JSON
 function leerDeportes() {
   try {
     return JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
@@ -11,6 +12,7 @@ function leerDeportes() {
   }
 }
 
+// Función para escribir los datos de deportes en el archivo JSON
 function escribirDeportes(deportes) {
   try {
     fs.writeFileSync(dataPath, JSON.stringify(deportes, null, 2), 'utf-8');
@@ -19,7 +21,9 @@ function escribirDeportes(deportes) {
   }
 }
 
+// Exporta un objeto con métodos para manejar las solicitudes relacionadas con los deportes
 module.exports = {
+  // Método para agregar un deporte
   agregarDeporte(req, res) {
     const { nombre, precio } = req.body;
     const deportes = leerDeportes();
@@ -28,11 +32,13 @@ module.exports = {
     res.send('Deporte agregado exitosamente.');
   },
 
+  // Método para obtener todos los deportes
   obtenerDeportes(req, res) {
     const deportes = leerDeportes();
     res.json(deportes);
   },
 
+  // Método para editar un deporte
   editarDeporte(req, res) {
     const { nombre } = req.params;
     const { precio } = req.body;
@@ -47,6 +53,7 @@ module.exports = {
     }
   },
 
+  // Método para eliminar un deporte
   eliminarDeporte(req, res) {
     const { nombre } = req.params;
     const deportes = leerDeportes();
